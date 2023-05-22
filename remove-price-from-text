@@ -1,0 +1,4 @@
+function bd_rrp_price_html( $price, $product ) {
+  return str_replace( __('From '), '', $price );
+}
+add_filter( 'woocommerce_get_price_html', 'bd_rrp_price_html', 100, 2 );
